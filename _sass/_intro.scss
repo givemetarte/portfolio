@@ -1,0 +1,40 @@
+.intro {
+    .section__image {
+        flex-shrink: 0;
+        width: 260px;
+        margin-right: 70px;
+        justify-content: center;
+        display: flex;
+        img {
+            max-width: 260px;
+        }
+        @include desktop {
+            margin-right: 50px;
+        }
+        @include little-desktop {
+            width: 150px;
+        }
+        @include tablet {
+            margin-right: 0;
+            width: auto;
+            img {
+                max-width: 180px;
+            }
+        }
+    }
+    .section__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.education, .updates, .random {
+    padding-top: 0;
+}
+.random {
+    padding-bottom: 200px;
+    @include tablet {
+        padding-bottom: 100px;
+    }
+}

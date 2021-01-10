@@ -1,0 +1,28 @@
+.drawing {
+    margin-bottom: 2rem;
+    .meta {
+        font-size: 0.9rem;
+        font-family: 'Inconsolata', monospace;
+        text-align: right;
+        @include mobile {
+            font-size: 0.8rem;
+            text-align: left;
+        }
+    }
+    .videowrapper {
+        float: none;
+        clear: both;
+        width: 100%;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

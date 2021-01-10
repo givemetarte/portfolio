@@ -1,0 +1,18 @@
+<section class="wrapper section experience updates">
+    <div class="section__title">Updates</div>
+    <div class="section__content">
+        <div class="exps">
+        {% for update in site.data.news %}
+        <div class="exp">
+            <div class="time-place">
+            <div>
+                {{ update.desc }}
+            </div>
+            <div class="exp__time">{{ update.time }}</div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+    

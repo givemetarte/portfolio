@@ -1,0 +1,37 @@
+.badge {
+    display: inline-block;
+    margin: 3px 3px 3px 0;
+    font-family: Inconsolata,monospace;
+    font-size: .75rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: $brand-color;
+    border: 1px solid $brand-color;
+    background: 0 0;
+    &.grey {
+        background: $grey-color;
+        border: none;
+        color: $background-color;
+    }
+}
+
+.publication {
+    margin-bottom: 2rem;
+
+    .title {
+        font-weight: 500;
+    }
+
+    .authors {
+        color: $black;
+    }
+}
+
+.extra-links {
+    margin-top: 10px;
+    font-size: .85rem;
+    a {
+        margin-right: .75rem;
+    }
+}

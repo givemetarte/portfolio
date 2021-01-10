@@ -1,0 +1,82 @@
+<style>
+    /* Generate CSS filter rules */
+    {% for topic in site.data.projects.topics %}
+    #category-{{topic}}:checked ~ #projects > .project:not(.category-{{topic}}),
+    #category-featured:checked ~ #projects > .project:not(.featured),
+    {% endfor %}
+    dummy
+    {
+        display: none;
+    }
+    #category-all:checked ~ .filter-labels #label-category-all,
+    {% for topic in site.data.projects.topics %}
+    #category-{{topic}}:checked ~ .filter-labels #label-category-{{topic}},
+    {% endfor %}
+    #category-featured:checked ~ .filter-labels #label-category-featured,
+    dummy
+    {
+        font-weight: 600;
+        border-bottom: 2px solid #007bff;
+    }
+</style>
+
+<div class="filtered-list">
+
+<input type="radio" name="category" id="category-all" checked />
+{% for topic in site.data.projects.topics %}
+<input type="radio" name="category" id="category-{{topic}}" />
+{% endfor %}
+<input type="radio" name="category" id="category-featured" />
+
+{% assign projects = site.data.projects.projects | sort: "year" | reverse | where_exp: "proj", "proj.hidden == nil" %}
+
+<div class="filter-labels">
+    <div class="filter-label-list">
+        <div class="segmented-control">
+            <label for="category-all" id="label-category-all">all ({{ projects.size }})</label>
+            {% for topic in site.data.projects.topics %}
+                {% assign entries = projects | where: "topic", topic %}
+                <label for="category-{{topic}}" id="label-category-{{topic}}">{{ topic }} ({{ entries.size }})</label>
+            {% endfor %}
+            {% assign featureds = projects | where: "featured", true %}
+            <label for="category-featured" id="label-category-featured">featured ({{ featureds.size }})</label>
+        </div>
+    </div>
+</div>
+
+<section id="projects" class="row">
+
+{% for proj in projects %}
+<div id="{{ proj.id }}" class="col-12 col-sm-6 col-md-4 project {% for t in proj.topic %} category-{{ t }} {% endfor %} {% if proj.featured %} featured {% endif %}">
+    <div class='box-visible'>
+        <h3 class="mb-2"><b>{{ proj.title }}</b></h3>
+
+        <div class="mb-2">
+            {% include extra_links.html proj=proj %}
+        </div>
+
+        {% if proj.image %}
+        <div class="teaser">
+            <img src='{{ proj.image }}' alt='Loading...' data-action="zoom">
+        </div>
+        {% endif %}
+
+        <p class="description">
+            {{ proj.desc | markdownify | remove: '<p>' | remove: '</p>'}}
+        </p>
+
+        <p class="keywords">
+            {% for k in proj.keywords %} {{ k }}{% unless forloop.last %}; {% endunless %}  {% endfor %}
+        </p>
+        
+        <div>
+            {% for t in proj.topic %}
+            <small class="badge">{{ t }}</small>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+</section>
+</div>

@@ -1,0 +1,43 @@
+---
+layout: home
+title: Projects
+order: 2
+---
+
+
+<div class="wrapper mb-2">
+
+    {% include project-list.html %}
+
+</div>
+
+<div id="modal" class="modal micromodal-slide" aria-hidden="false">
+    <div class="closeModal modal__overlay" tabindex="-1">
+        <div class="modal__container">
+            <header class="modal__header">
+                <h2 id="modal-title" class="modal__title">
+                Title of the project
+                </h2>
+                <button class="closeModal modal__close">
+                </button>
+            </header>
+
+            <div id="modal-award"></div>
+
+            <div id="modal-extra">
+                Buttons
+            </div>
+            <div class="project-images">
+                {% assign projects = site.data.projects.projects | sort: "year" | reverse | where_exp: "proj", "proj.hidden == nil" %}
+                {% for proj in projects %}
+                    {% if proj.image %}
+                    <img id="img-{{proj.id}}" src='{{ proj.image }}' alt='Loading...'>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div id="modal-content" class="modal__content">
+                Project description
+            </div>
+        </div>
+    </div>
+</div>

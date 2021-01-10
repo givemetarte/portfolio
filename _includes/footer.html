@@ -1,0 +1,21 @@
+<footer class="footer">
+  <div class="footer__copyright">
+    <div class="top">
+      <span>Jaeyoon Song</span>
+      <img class="emoji" src="/images/emoji/laptop.png" alt="laptop">
+    </div>
+    <div class="bottom">
+      <span>Portfolio Website</span>
+      <span>2021</span>
+    </div>
+  </div>
+  <div class="footer__links">
+    {%- if site.email -%}
+    <a class="u-email" href="mailto:{{ site.email }}"><i class="far fa-envelope"></i> Email</a>
+    {%- endif -%}
+    
+    <a class="u-email" target="_blank" href="https://github.com/jyoonsong/"><i class="fab fa-github"></i> GitHub</a>
+    <a class="u-email" target="_blank" href="https://dribbble.com/jaeyoon/"><i class="fab fa-dribbble"></i> Dribbble</a>
+    <a class="u-email" target="_blank" href="https://instagram.com/jaeyoon.jpg/"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+</footer>

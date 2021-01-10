@@ -1,0 +1,19 @@
+<section class="wrapper section experience">
+    <div class="section__title">Experience</div>
+    <div class="section__content">
+        <div class="exps">
+        {% for exp in site.data.experience %}
+        <div class="exp">
+            <div class="time-place">
+            <div class="exp__institute">
+                <a class="black" href="{{exp.url}}" target="_blank">{{exp.institute}}</a>
+            </div>
+            <div class="exp__time">{{exp.time}}</div>
+            </div>
+            Advised by <a href="{{exp.advisorurl}}" class="black">{{exp.advisor}}</a>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+    

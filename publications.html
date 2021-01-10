@@ -1,0 +1,37 @@
+---
+layout: home
+title: Publications
+order: 1
+---
+
+{% assign publications = site.data.publications | sort: "year" | reverse %}
+{% assign papers = publications | where_exp: "item", "item.attrs contains 'paper'" %}
+{% assign posters = publications | where_exp: "item", "item.attrs contains 'poster'" %}
+{% assign wips = publications | where_exp: "item", "item.attrs contains 'wip'" %}
+
+<div class="wrapper publications">
+
+    <div class="section">
+        <div class="section__title">
+            Conference & Journal Papers
+        </div>
+
+        <div class="section__content">
+            {% for pub in papers %}
+            {% include publication.html pub = pub %} 
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section__title">
+            Posters
+        </div>
+
+        <div class="section__content">
+            {% for pub in posters %}
+            {% include publication.html pub = pub %} 
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.experience {
+    .exp {
+      margin-bottom: 25px;
+      .time-place {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+          display: block;
+        }
+      }
+      &__institute {
+        font-weight: 700;
+      }
+      &__time {
+        font-size: 0.9rem;
+        font-family: 'Inconsolata', monospace;
+        min-width: 100px;
+        text-align: right;
+        @include mobile {
+          font-size: 0.8rem;
+          text-align: left;
+        }
+      }
+    }
+    .arrow-link {
+      font-size: 1.25rem;
+      &:after {
+        width: 20px;
+        height: 20px;
+      }
+    }
+}
+  

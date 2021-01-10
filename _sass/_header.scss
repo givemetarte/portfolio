@@ -1,0 +1,135 @@
+/**
+ * Site header
+ */
+ .site-header {
+  border-bottom: 1px solid $grey-color-light;
+  min-height: $spacing-unit * 1.865;
+  // line-height: $base-line-height * $base-font-size * 2.25;
+
+  padding: 0 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 999;
+
+  @include thirteen {
+    padding: 0 100px;
+  }
+  @include desktop {
+    padding: 0 50px;
+  }
+  @include mobile {
+    padding: 0 15px;
+    min-height: $spacing-unit * 1.4;
+  }
+}
+
+.site-title {
+  width: 26px;
+}
+
+.site-nav {
+  position: absolute;
+  top: 19px;
+  right: 45px;
+  background-color: $background-color;
+  border: 1px solid $grey-color-light;
+  border-radius: 5px;
+  text-align: right;
+  font-weight: 400;
+
+  @include mobile {
+    top: 10px;
+    right: 15px;
+  }
+
+  .nav-trigger {
+      display: none;
+  }
+
+  .menu-icon {
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+
+    > svg path {
+      fill: $grey-color-dark;
+    }
+  }
+
+  label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+
+  input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .page-link {
+    color: $grey-color;
+    line-height: $base-line-height;
+    display: block;
+    padding: 5px 10px;
+
+    &.active {
+      color: $black;
+      font-weight: 500;
+    }
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: $on-medium) {
+    position: static;
+    float: right;
+    border: none;
+    background-color: inherit;
+
+    label[for="nav-trigger"] {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    input ~ .trigger {
+      display: block;
+    }
+
+    .page-link {
+      display: inline;
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      margin-left: auto;
+    }
+  }
+}
+
+

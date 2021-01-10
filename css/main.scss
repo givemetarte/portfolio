@@ -1,0 +1,70 @@
+---
+---
+@charset "utf-8";
+
+// fonts
+$font-stack: 'Source Sans Pro', system, system-ui, -apple-system,
+  BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+$Apercu: 'Apercu', $font-stack;
+$base-font-size:   15px !default;
+$base-font-size-mobile:   14px !default;
+$base-font-weight: 300 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.6 !default;
+
+// colors
+$text-color:       #444452 !default;
+$black:            #1f1f21 !default;
+$peach:            #fad4af !default;
+$background-color: #fff !default;
+$brand-color:      #007bff !default;
+$brand-color-light:#a2d8d8 !default;
+$brand-color-dark: #0b9fab !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 42%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+// numbers
+$spacing-unit:     40px !default;
+$content-width:    1200px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        1080px !default;
+
+$on-medium:        $on-palm !default;
+$on-large:         $on-laptop !default;
+
+%center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// mixins
+@mixin media-query($device) {
+  @media screen and (scssax-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// import partials
+@import
+  "font",
+  "emoji",
+  "media",
+  "base",
+  "grid",
+  "footer",
+  "header",
+  "intro",
+  "experience",
+  "publication",
+  "projects",
+  "modal",
+  "fun"
+;

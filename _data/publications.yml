@@ -1,0 +1,94 @@
+- id: soundglance
+  title: "SoundGlance: Briefing the Glanceable Cues of Web Pages for Screen Reader Users"
+  year: 2019
+  authors:
+    - Jaeyoon Song
+    - Kiroong Choe
+    - Jaemin Jo
+    - Jinwook Seo
+  poster:
+    title: ACM Conference on Human Factors in Computing Systems
+    abbr: CHI 2019
+    venue: Glasgow, United Kingdom
+  url: https://dl.acm.org/citation.cfm?id=3312865/
+  attrs:
+    - international
+    - conference
+    - poster
+  type: Poster
+    
+- id: oss
+  title: "What Is Needed for the Sustainable Success of Open Source Software Projects: Efficiency Analysis of Commit Production Process via Git"
+  year: 2018
+  authors:
+    - Jaeyoon Song
+    - Changhee Kim
+  journal:
+    title: Sustainability (SSCI/SCIE)
+    volume: 10
+    issue: 9
+    page: 3001
+  url: https://www.mdpi.com/2071-1050/10/9/3001
+  attrs:
+    - international
+    - journal
+    - paper
+  type: Journal
+
+- id: solutionChat
+  title: "SolutionChat: Real-time Moderator Support for Chat-based Structured Discussion"
+  year: 2020
+  authors:
+    - Sungchul Lee
+    - Jaeyoon Song
+    - Eunyoung Ko
+    - Seongho Park
+    - Jihee Kim
+    - Juho Kim
+  conference:
+    title: CHI
+    year: 2020
+  url: https://doi.org/10.1145/3313831.3376609
+  attrs:
+    - international
+    - conference
+    - paper
+  type: Conference
+
+- id: talkingBoogie
+  title: "TalkingBoogie: Collaborative Mobile AAC System for Non-verbal Children with Developmental Disabilities and Their Caregivers"
+  year: 2020
+  authors:
+    - Donghoon Shin
+    - Jaeyoon Song
+    - Seokwoo Song
+    - Jisoo Park
+    - Joonhwan Lee
+    - Soojin Jeon
+  conference:
+    title: CHI
+    year: 2020
+  url: https://doi.org/10.1145/3313831.3376154
+  attrs:
+    - international
+    - conference
+    - paper
+  type: Conference
+  award: Honorable Mention Award (Top 5% among submissions)
+
+- id: minglr
+  title: "Online Mingling: Supporting Ad Hoc, Private Conversations at Virtual Conferences"
+  year: 2021
+  authors:
+    - Jaeyoon Song
+    - Christoph Riedl
+    - Thomas Malone
+  conference:
+    title: CHI
+    year: 2021
+  attrs:
+    - international
+    - conference
+    - paper
+  type: Conference
+  toappear: true

@@ -1,0 +1,44 @@
+.emoji {
+    display: inline-block;
+    vertical-align: text-bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+
+    &.wave {
+        background-image: url('../images/emoji/wave.png');
+        margin-left: 8px;
+        animation: wave 4s 1s both infinite;
+  
+        @keyframes wave {
+          from {
+            transform: none;
+          }
+          4% {
+            transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+          }
+          8% {
+            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
+          }
+          12% {
+            transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
+          }
+          16% {
+            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+          }
+          20% {
+            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+          }
+          24% {
+            transform: none;
+          }
+        }
+    }
+
+    &.email {
+        background-image: url('../images/emoji/email.png');
+        margin: 0 5px -5px;
+      }
+}

@@ -1,0 +1,19 @@
+<section class="wrapper section experience education">
+    <div class="section__title">Education</div>
+    <div class="section__content">
+        <div class="exps">
+        {% for exp in site.data.education %}
+        <div class="exp">
+            <div class="time-place">
+            <div class="exp__institute">
+                {{exp.degree}}, <a class="black" href="{{exp.url}}" target="_blank">{{exp.institute}}</a>
+            </div>
+            <div class="exp__time">{{exp.time}}</div>
+            </div>
+            {{exp.desc}}
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+    
