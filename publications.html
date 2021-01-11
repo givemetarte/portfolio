@@ -16,7 +16,7 @@ order: 1
             Conference & Journal Papers
         </div>
 
-        <div class="section__content">
+        <div class="section__content indent">
             {% for pub in papers %}
             {% include publication.html pub = pub %} 
             {% endfor %}
@@ -28,7 +28,7 @@ order: 1
             Posters
         </div>
 
-        <div class="section__content">
+        <div class="section__content indent">
             {% for pub in posters %}
             {% include publication.html pub = pub %} 
             {% endfor %}

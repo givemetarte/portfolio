@@ -149,6 +149,12 @@ ul, ol, dl, figure,
   }
 }
 
+.indent {
+  @include tablet {
+    padding-left: 10px;
+  }
+}
+
 
 
 /**

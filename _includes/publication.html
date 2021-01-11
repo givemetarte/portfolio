@@ -10,7 +10,7 @@
     <div class="authors">
         {% for author in pub.authors %}
             {% if pub.authors.length > 1 and forloop.last %} and {% endif %}
-                {% if author == "Jaeyoon Song" %}<i>{{ author }}</i>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}
+                {% if author == "Jaeyoon Song" or author == "Jaeyoon Song*" %}<i>{{ author }}</i>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}
         {% endfor %}
     </div>
 

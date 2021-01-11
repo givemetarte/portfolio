@@ -1,25 +1,32 @@
 .intro {
     .section__image {
-        flex-shrink: 0;
-        width: 260px;
+        min-width: 260px;
+        min-height: 240px;
         margin-right: 70px;
-        justify-content: center;
-        display: flex;
+        display: block;
+        position: relative;
         img {
-            max-width: 260px;
+            width: 260px;
+            max-height: 420px !important;
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+            position: absolute;
+            display: inline-block;
+            vertical-align: middle;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            @include little-desktop {
+                width: 150px;
+            }
         }
         @include desktop {
             margin-right: 50px;
         }
-        @include little-desktop {
-            width: 150px;
-        }
         @include tablet {
             margin-right: 0;
-            width: auto;
-            img {
-                max-width: 180px;
-            }
         }
     }
     .section__content {
