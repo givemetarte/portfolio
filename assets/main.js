@@ -18,16 +18,16 @@ window.onload = function() {
             modal.classList.add("is-open");
             modal.setAttribute("aria-hidden", "false");
 
-            document.body.classList.add("modal-open");
             document.querySelector("html").classList.add("modal-open");
+            document.querySelector(".home").classList.add("modal-open");
             document.body.classList.add("modal-open");
         }
         function closeModal() {
             document.getElementById("modal").classList.remove("is-open");
             modal.setAttribute("aria-hidden", "true");
 
-            document.body.classList.remove("modal-open");
             document.querySelector("html").classList.remove("modal-open");
+            document.querySelector(".home").classList.remove("modal-open");
             document.body.classList.remove("modal-open");
 
             let showed = document.querySelector(".project-images img.show");
