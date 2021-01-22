@@ -17,7 +17,7 @@ name: Jaeyoon Song
 title: Jaeyoon Song
 email: jaeyoons@mit.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Jaeyoon Song is an undergraduate student studying Business, Information Science, and Computer Science at Seoul National University. She is interested in computer-supported cooperative work (CSCW) and Social Computing, which are subfields of human-computer interaction (HCI).
+  Jaeyoon Song is a PhD student at MIT Sloan in the Information Technologies (IT) group
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jaeyoon.io" # the base hostname & protocol for your site, e.g. https://example.com
 github_username:  jyoonsong
