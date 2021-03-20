@@ -1,17 +1,16 @@
-- institute: MIT Center for Collective Intelligence
-  url: https://cci.mit.edu
-  time: Jun 2020 - Present
-  advisor: Thomas Malone
-  advisorurl: https://mitsloan.mit.edu/faculty/directory/thomas-w-malone
+- institute: HIKE Lab.
+  url: https://hike.cau.ac.kr
+  time: Jan 2021 - Present
+  advisor: Haklae Kim
+  advisorurl: http://lis.cau.ac.kr/01_info/info_03a_01a.php?idx=6
 
-- institute: KAIST Interaction Lab
-  url: https://kixlab.org
-  time: Dec 2018 - Aug 2019
-  advisor: Juho Kim
-  advisorurl: https://juhokim.com
+- institute: Team.Cayley
+  url: http://okfn.kr/projects/covid-19-our-memory/
+  time: June 2020 - Present
+  desc: Information Science (Library and Information Science)
 
-- institute: SNU Human-Computer Interaction Lab
-  url: https://hcil.snu.ac.kr
-  time: Jun 2018 - Aug 2018
-  advisor: Jinwook Seo
-  advisorurl: https://hcil.snu.ac.kr/people/jinwook-seo/
+- institute: COSADAMA
+  url: https://cosadama.github.io/cosadama/
+  time: Jan 2020 - Present
+  advisor: Haklae Kim
+  advisorurl: http://lis.cau.ac.kr/01_info/info_03a_01a.php?idx=6
